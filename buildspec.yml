@@ -9,6 +9,7 @@ phases:
   build:
     commands:
       - npm install
+      - npm install -g appcenter-cli
       - gradle --stop
       - gradle wrapper
       - gradle --status
@@ -16,6 +17,11 @@ phases:
       - ls
       - chmod +x ./gradlew
       - ./gradlew assembleDebug
+      
+  postbuild:
+    commands:
+      - appcenter login --token a30d1d90845599138da62c9abf8149642d3f64dd
+      
 artifacts:
   files:
      - './android/app/build/outputs/**/*.apk'
