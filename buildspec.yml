@@ -9,12 +9,10 @@ phases:
   build:
     commands:
       - npm install
-      - gradle wrapper
       - gradle --stop
+      - gradle wrapper
       - gradle --status
       - chmod +x ./gradlew
       - ls
       - ./gradlew assembleDebug
-artifacts:
-  files:
-    - app/build/outputs/apk/app-debug.apk
+
