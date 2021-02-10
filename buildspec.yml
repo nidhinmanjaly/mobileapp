@@ -12,7 +12,8 @@ phases:
       - gradle --stop
       - gradle wrapper
       - gradle --status
-      - chmod +x ./gradlew
+      - cd android
       - ls
+      - chmod +x ./gradlew
       - ./gradlew assembleDebug
 
