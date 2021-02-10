@@ -9,8 +9,9 @@ phases:
   build:
     commands:
       - npm install
-      - gradle --stop
       - gradle wrapper
+      - gradle --stop
+      - ls
       - chmod +x ./gradlew
       - ./gradlew assembleDebug
 artifacts:
