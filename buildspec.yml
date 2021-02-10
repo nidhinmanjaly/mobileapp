@@ -11,8 +11,9 @@ phases:
       - npm install
       - gradle wrapper
       - gradle --stop
-      - ls
+      - gradle --status
       - chmod +x ./gradlew
+      - ls
       - ./gradlew assembleDebug
 artifacts:
   files:
