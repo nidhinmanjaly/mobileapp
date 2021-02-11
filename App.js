@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.black,
   },
   sectionContainer: {
     marginTop: 32,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
+    color: Colors.red,
   },
   sectionDescription: {
     marginTop: 8,
