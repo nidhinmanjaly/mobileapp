@@ -1,20 +1,15 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      android: 29
-      java: corretto8
       
   build:
     commands:
-      - npm install
       - npm install -g appcenter-cli
       
   post_build:
     commands:
       - appcenter login --token a30d1d90845599138da62c9abf8149642d3f64dd
-      -  appcenter codepush release-react -a NidhinKJC/AwesomeProject -d Staging
-      -  appcenter codepush release-react -a NidhinKJC/AwesomeProject -d Production
+      - appcenter codepush release-react -a NidhinKJC/AwesomeProject -d Staging
+     
       
 
