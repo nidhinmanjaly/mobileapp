@@ -1,16 +1,30 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      android: 29
+      java: corretto8
       
   build:
     commands:
       - npm install
       - npm install -g appcenter-cli
+      - gradle --stop
+      - gradle wrapper
+      - gradle --status
+      - cd android
+      - ls
+      - chmod +x ./gradlew
+      - ./gradlew assembleDebug
       
   post_build:
     commands:
       - appcenter login --token a30d1d90845599138da62c9abf8149642d3f64dd
-      - appcenter codepush release-react -a NidhinKJC/AwesomeProject -d Staging
+      
+artifacts:
+  files:
+     - './android/app/build/outputs/**/*.apk'
      
       
 
